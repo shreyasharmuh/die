@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f4ef;
+  --foreground: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f7f4ef;
+  color: #111;
+  overflow-x: hidden;
+  letter-spacing: -0.02em;
+}
+
+.hero-title {
+  font-size: clamp(5rem, 14vw, 14rem);
+  font-weight: 300;
+  line-height: 0.85;
+  letter-spacing: -0.08em;
+}
+
+.section-title {
+  font-size: clamp(2rem, 6vw, 5rem);
+}
