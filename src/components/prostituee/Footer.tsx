@@ -24,10 +24,9 @@ export default function Footer() {
 
           <p className="text-[10px] tracking-[0.35em] uppercase opacity-30">
 
-            paris • milan • zurich 
+  paris atelier • geneva studio • luxembourg house
 
-          </p>
-
+</p>
         </div>
 
       </div>
