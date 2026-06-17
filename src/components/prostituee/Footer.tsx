@@ -8,7 +8,7 @@ export default function Footer() {
 
           <h2 className="text-4xl md:text-5xl font-extralight tracking-[0.14em]">
 
-            PROSTITUTÉE
+            PROSTITUÉE
 
           </h2>
 

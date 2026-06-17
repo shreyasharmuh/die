@@ -20,7 +20,7 @@ export default function Manifesto() {
 
             <p className="text-[11px] uppercase tracking-[0.22em] leading-8 opacity-60">
 
-              prostitutée reimagines underwear, loungewear and essentials as contemporary luxury objects.
+              prostituée reimagines underwear, loungewear and essentials as contemporary luxury objects.
 
             </p>
 
