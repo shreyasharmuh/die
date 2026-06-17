@@ -52,12 +52,29 @@ export default function Navbar() {
         </Link>
 
         {/* CENTER NAV */}
-        <nav className="hidden md:flex gap-12 text-sm tracking-[0.25em]">
-          <Link href="/shop">SHOP</Link>
-          <Link href="/collections">COLLECTIONS</Link>
-          <Link href="/collaborations">COLLABORATIONS</Link>
-          <Link href="/about">ABOUT</Link>
-        </nav>
+        <nav className="hidden md:flex items-center gap-12 text-sm tracking-[0.25em]">
+
+  <Link href="/shop">
+    SHOP
+  </Link>
+
+  <Link href="/collections">
+    COLLECTIONS
+  </Link>
+
+  <Link href="/prostituee">
+    PROSTITUTÉE
+  </Link>
+
+  <Link href="/collaborations">
+    COLLABORATIONS
+  </Link>
+
+  <Link href="/about">
+    ABOUT
+  </Link>
+
+</nav>
 
         {/* ICONS */}
         <div className="flex items-center gap-6">
