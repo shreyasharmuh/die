@@ -2,47 +2,71 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-[#090909] text-white">
+    <section className="relative min-h-screen overflow-hidden bg-[#090909] text-white">
 
-      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 md:px-20 pt-32 md:pt-40 pb-20">
+      {/* BACKGROUND IMAGE */}
 
-        <div className="grid lg:grid-cols-[1fr_0.9fr] gap-16 lg:gap-28 items-center">
+      <div className="absolute inset-0">
 
-          <div className="space-y-14">
+        <Image
+          src="/images/prostituee/hero.jpg"
+          alt="prostituee hero"
+          fill
+          priority
+          className="object-cover opacity-80"
+        />
 
-            <p className="text-[9px] tracking-[0.6em] uppercase opacity-40">
+        {/* OVERLAY */}
+
+        <div className="absolute inset-0 bg-black/40" />
+
+      </div>
+
+      {/* CONTENT */}
+
+      <div className="relative z-10 min-h-screen flex items-center">
+
+        <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-8 md:px-20">
+
+          <div className="space-y-10">
+
+            <p className="text-[9px] tracking-[0.6em] uppercase opacity-60">
 
               an intimate house by die
 
             </p>
 
-            <div className="space-y-8">
+            <h1
+              className="
+              text-5xl
+              sm:text-6xl
+              md:text-8xl
+              lg:text-[11rem]
+              xl:text-[13rem]
+              font-extralight
+              tracking-[0.08em]
+              leading-none
+            "
+            >
 
-              <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[9rem] font-extralight tracking-[0.12em] leading-none">
+              PROSTITUTÉE
 
-                PROSTITUTÉE
+            </h1>
 
-              </h1>
+            <p
+              className="
+              max-w-xl
+              text-[11px]
+              uppercase
+              tracking-[0.28em]
+              leading-7
+              opacity-70
+            "
+            >
 
-              <p className="max-w-lg text-[11px] uppercase tracking-[0.28em] leading-7 opacity-55">
+              underwear, loungewear and private uniforms for women and men.
 
-                underwear, loungewear and private uniforms for women and men.
-
-              </p>
-
-            </div>
-
-          </div>
-
-          <div className="relative h-[420px] sm:h-[520px] md:h-[650px] lg:h-[780px] overflow-hidden">
-
-            <Image
-              src="/images/prostituee/hero.jpg"
-              alt=""
-              fill
-              priority
-              className="object-cover"
-            />
+            </p>
 
           </div>
 
