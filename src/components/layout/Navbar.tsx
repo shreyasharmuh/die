@@ -63,7 +63,7 @@ export default function Navbar() {
   </Link>
 
   <Link href="/prostituee">
-    PROSTITUTÉE
+    PROSTITUÉE
   </Link>
 
   <Link href="/collaborations">

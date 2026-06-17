@@ -49,7 +49,7 @@ export default function Hero() {
             "
             >
 
-              PROSTIUTÉE
+              PROSTITUÉE
 
             </h1>
 
