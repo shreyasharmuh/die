@@ -1,7 +1,7 @@
 import Hero from "@/components/atheiste/Hero";
 import Manifesto from "@/components/atheiste/Manifesto";
 import Categories from "@/components/atheiste/Categories";
-import Journal from "@/components/atheiste/Journal";
+import Observations from "@/components/atheiste/Observations";
 import Footer from "@/components/atheiste/Footer";
 
 export default function AtheistePage() {
@@ -14,7 +14,7 @@ export default function AtheistePage() {
 
       <Categories />
 
-      <Journal />
+      <Observations />
 
       <Footer />
 
