@@ -32,13 +32,13 @@ export const collaborations: Collaboration[] = [
   {
     slug: "die-x-balenciaga",
     name: "Balenciaga",
-    status: "coming-soon",
+    status: "ACTIVE",
   },
 
   {
     slug: "die-x-ysl",
     name: "Saint Laurent",
-    status: "coming-soon",
+    status: "ACTIVE",
   },
 
   {

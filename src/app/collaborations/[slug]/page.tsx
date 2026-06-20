@@ -16,7 +16,7 @@ ADIDAS ORIGINALS
 ----------------------------------- */
 
 import AdidasHero from "@/components/collaborations/adidas-originals/Hero";
-import Manifesto from "@/components/collaborations/adidas-originals/Manifesto";
+import AdidasManifesto from "@/components/collaborations/adidas-originals/Manifesto";
 import Gallery from "@/components/collaborations/adidas-originals/Gallery";
 import FutureArchive from "@/components/collaborations/adidas-originals/FutureArchive";
 import AdidasTheNewUniform from "@/components/collaborations/adidas-originals/TheNewUniform";
@@ -46,11 +46,25 @@ import BalenciagaTheNewUniform from "@/components/collaborations/balenciaga/TheN
 
 import RunwayArchive from "@/components/collaborations/balenciaga/RunwayArchive";
 
-import EditorialCampaign from "@/components/collaborations/balenciaga/EditorialCampaign";
+import BalenciagaEditorialCampaign from "@/components/collaborations/balenciaga/EditorialCampaign";
 
-import Objects from "@/components/collaborations/balenciaga/Objects";
+import BalenciagaObjects from "@/components/collaborations/balenciaga/Objects";
 
 import BalenciagaFooter from "@/components/collaborations/balenciaga/Footer";
+
+import SaintLaurentHero from "@/components/collaborations/saint-laurent/Hero";
+
+import Manifesto from "@/components/collaborations/saint-laurent/Manifesto";
+
+import BeautyCodes from "@/components/collaborations/saint-laurent/BeautyCodes";
+
+import EditorialCampaign from "@/components/collaborations/saint-laurent/EditorialCampaign";
+
+import AtelierNotes from "@/components/collaborations/saint-laurent/AtelierNotes";
+
+import ObjectsOfDesire from "@/components/collaborations/saint-laurent/ObjectsOfDesire";
+
+import SaintLaurentFooter from "@/components/collaborations/saint-laurent/Footer";
 
 type Props = {
   params: Promise<{
@@ -181,25 +195,48 @@ export default async function CollaborationPage({
 
 
   if (slug === "die-x-balenciaga") {
-    return (
-      <main className="bg-black text-white overflow-x-hidden">
+  return (
+    <main className="bg-black text-white overflow-x-hidden">
 
-        <BalenciagaHero />
+      <Hero />
 
-        <BalenciagaManifesto />
+      <Manifesto />
 
-        <BalenciagaTheNewUniform />
+      <BalenciagaTheNewUniform />
 
-        <RunwayArchive />
+      <RunwayArchive />
 
-        <EditorialCampaign />
+      <EditorialCampaign />
 
-        <Objects />
+      <BalenciagaObjects />
 
-        <BalenciagaFooter />
+      <BalenciagaFooter />
 
-      </main>
-    );
-  }
+    </main>
+  );
+}
+
+
+if (slug === "die-x-ysl") {
+  return (
+    <main className="bg-black text-white overflow-x-hidden">
+
+      <SaintLaurentHero />
+
+      <Manifesto />
+
+      <BeautyCodes />
+
+      <EditorialCampaign />
+
+      <AtelierNotes />
+
+      <ObjectsOfDesire />
+
+      <SaintLaurentFooter />
+
+    </main>
+  );
+}
   return null;
 }

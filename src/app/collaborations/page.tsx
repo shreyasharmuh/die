@@ -28,13 +28,13 @@ const collaborations: Collaboration[] = [
   {
     name: "die × balenciaga",
     slug: "die-x-balenciaga",
-    status: "coming-soon",
+    status: "active",
   },
 
   {
     name: "die × ysl",
     slug: "die-x-ysl",
-    status: "coming-soon",
+    status: "active",
   },
 
   {
