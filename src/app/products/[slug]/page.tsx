@@ -51,7 +51,7 @@ export default async function ProductPage({
 
       <Details product={product} />
 
-      <EditorialCampaign product={product} />
+      <EditorialCampaignWithProduct product={product} />
 
       <RelatedProducts product={product} />
 
