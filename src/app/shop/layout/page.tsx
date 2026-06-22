@@ -3,5 +3,19 @@ export default function ShopLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <main
+      className="
+      bg-[var(--die-background)]
+
+      text-black
+
+      overflow-x-hidden
+
+      min-h-screen
+    "
+    >
+      {children}
+    </main>
+  );
 }

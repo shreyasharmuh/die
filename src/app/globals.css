@@ -1,28 +1,137 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f4ef;
-  --foreground: #000;
+
+  /* DIE SYSTEM */
+
+  --die-background: #f6f4f1;
+
+  --die-white: #ffffff;
+
+  --die-black: #111111;
+
+  --die-grey: #6b6b6b;
+
+  --die-light-grey: #b7b7b7;
+
+  --die-border: rgba(0, 0, 0, 0.08);
+
+  /* LEGACY */
+
+  --background: var(--die-background);
+
+  --foreground: var(--die-black);
+
+}
+
+/* RESET */
+
+* {
+  box-sizing: border-box;
 }
 
 html {
+
   scroll-behavior: smooth;
+
 }
 
 body {
-  background: #f7f4ef;
-  color: #111;
+
+  background: var(--die-background);
+
+  color: var(--die-black);
+
   overflow-x: hidden;
+
   letter-spacing: -0.02em;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+
 }
 
+/* TYPOGRAPHY */
+
 .hero-title {
+
   font-size: clamp(5rem, 14vw, 14rem);
+
   font-weight: 300;
+
   line-height: 0.85;
+
   letter-spacing: -0.08em;
+
 }
 
 .section-title {
+
   font-size: clamp(2rem, 6vw, 5rem);
+
+  font-weight: 300;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.05em;
+
+}
+
+/* UTILITIES */
+
+.editorial-label {
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7em;
+
+  opacity: 0.4;
+
+}
+
+.border-system {
+
+  border-color: var(--die-border);
+
+}
+
+.text-muted {
+
+  color: var(--die-grey);
+
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+
+  width: 6px;
+
+}
+
+::-webkit-scrollbar-track {
+
+  background: transparent;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+  background: rgba(0, 0, 0, 0.15);
+
+}
+
+/* SELECTION */
+
+::selection {
+
+  background: #111;
+
+  color: #fff;
+
 }
