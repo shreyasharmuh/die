@@ -1,26 +1,75 @@
 export default function Manifesto() {
   return (
-    <section className="bg-[#f7f4ef] text-black py-48 px-8 md:px-16">
+    <section className="bg-[#fafafa] py-40 md:py-64 px-8 md:px-20">
 
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-5xl mx-auto">
 
-        <p className="uppercase tracking-[0.5em] text-xs text-black/40 mb-10">
-          Manifesto
+        <p
+          className="
+          text-[9px]
+          uppercase
+          tracking-[0.7em]
+          opacity-40
+          mb-12
+        "
+        >
+
+          manifesto
+
         </p>
 
-        <h2 className="text-5xl md:text-8xl leading-[0.95] tracking-[-0.06em] font-light">
-          WE BELIEVE
+        <h2
+          className="
+          text-3xl
+          sm:text-4xl
+          md:text-6xl
+          lg:text-7xl
+          font-extralight
+          leading-[1.45]
+          tracking-[0.02em]
+        "
+        >
+
+          die is a european house
+
           <br />
-          IN LESS,
+
+          exploring fashion,
+
           <br />
-          BUT BETTER.
+
+          movement and future identities.
+
+          <br />
+
+          we build worlds.
+
+          <br />
+
+          not products.
+
         </h2>
 
-        <p className="max-w-2xl mx-auto mt-12 text-lg text-black/60 leading-relaxed">
-          Designed to endure beyond seasons.
-          Created with intention, precision and restraint.
-          Every garment exists for a reason.
-        </p>
+        <div className="mt-24">
+
+          <p
+            className="
+            max-w-xl
+            text-sm
+            leading-[2]
+            tracking-[0.08em]
+            uppercase
+            opacity-50
+          "
+          >
+
+            a contemporary ecosystem where fashion,
+            editorial culture and digital experiences
+            coexist.
+
+          </p>
+
+        </div>
 
       </div>
 
