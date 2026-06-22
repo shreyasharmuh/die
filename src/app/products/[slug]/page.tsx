@@ -1,65 +1,61 @@
-import Image from "next/image";
-import AddToCart from "@/components/cart/AddToCart";
-import { products } from "@/data/products";
 import { notFound } from "next/navigation";
+import type { ComponentType } from "react";
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
-  const product = products.find((item) => item.slug === params.slug);
+import { products } from "@/data/products";
 
-  if (!product) return notFound();
+import Hero from "@/components/product/Hero";
+
+import Story from "@/components/product/Story";
+
+import Gallery from "@/components/product/Gallery";
+
+import Details from "@/components/product/Details";
+
+import EditorialCampaign from "@/components/product/EditorialCampaign";
+
+import RelatedProducts from "@/components/product/RelatedProducts";
+
+const EditorialCampaignWithProduct = EditorialCampaign as ComponentType<{
+  product: typeof products[number];
+}>;
+
+type Props = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
+export default async function ProductPage({
+  params,
+}: Props) {
+
+  const { slug } = await params;
+
+  const product = products.find(
+    item => item.slug === slug
+  );
+
+  if (!product) {
+    notFound();
+  }
 
   return (
-    <main className="min-h-screen bg-white px-8 md:px-16 py-24">
 
-      <div className="grid lg:grid-cols-2 gap-20 max-w-6xl mx-auto">
+    <main className="bg-[#f7f4ef] text-black overflow-x-hidden">
 
-        {/* IMAGES */}
-        <div className="space-y-4">
-          {product.images.map((img, i) => (
-            <Image
-              key={i}
-              src={img}
-              alt={product.name}
-              width={1200}
-              height={1500}
-              className="w-full object-cover"
-            />
-          ))}
-        </div>
+      <Hero product={product} />
 
-        {/* DETAILS */}
-        <div className="lg:sticky lg:top-24 h-fit">
+      <Story product={product} />
 
-          <h1 className="text-4xl md:text-5xl font-light">
-            {product.name}
-          </h1>
+      <Gallery product={product} />
 
-          <p className="text-2xl mt-4">
-            ₹{product.price}
-          </p>
+      <Details product={product} />
 
-          <p className="mt-8 text-black/70">
-            {product.description}
-          </p>
+      <EditorialCampaign product={product} />
 
-          {/* SIZE */}
-          <div className="mt-10">
-            <p className="text-xs uppercase tracking-[0.3em] mb-4">
-              Size
-            </p>
-
-            <div className="flex gap-3 flex-wrap">
-              {product.sizes.map((size) => (
-                <button key={size.label} className="border px-4 py-2">
-                  {size.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-        </div>
-      </div>
+      <RelatedProducts product={product} />
 
     </main>
+
   );
 }
