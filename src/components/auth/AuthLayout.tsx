@@ -1,38 +1,51 @@
-export default function AuthLayout({ children }: any) {
-  return (
-    <div className="min-h-screen relative overflow-hidden bg-[#e9e9e9]">
+export default function AuthLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
 
-      {/* BACKGROUND IMAGE LAYER */}
+  return (
+
+    <div
+      className="
+      min-h-screen
+
+      bg-[#f7f4ef]
+
+      overflow-x-hidden
+    "
+    >
+
+      {/* subtle editorial grain */}
+
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/images/concrete-sky.jpg')",
-        }}
+        className="
+        absolute
+
+        inset-0
+
+        opacity-[0.03]
+
+        pointer-events-none
+      "
       />
 
-      {/* LIGHT ATMOSPHERIC OVERLAY */}
-      <div className="absolute inset-0 bg-white/30" />
+      {/* content */}
 
-      {/* CONTENT STAGE */}
-      <div className="relative min-h-screen flex justify-center">
+      <div
+        className="
+        relative
 
-        {/* INNER WRAPPER */}
-        <div className="w-full max-w-5xl px-6">
+        min-h-screen
+      "
+      >
 
-          {/* SPACER (NAVBAR SAFE ZONE) */}
-          <div className="h-24 md:h-28 lg:h-32" />
+        {children}
 
-          {/* MAIN CONTENT AREA */}
-          <div className="flex justify-center">
-            {children}
-          </div>
-
-          {/* BOTTOM BREATH SPACE (EDITORIAL BALANCE) */}
-          <div className="h-16 md:h-24" />
-
-        </div>
       </div>
 
     </div>
+
   );
+
 }
