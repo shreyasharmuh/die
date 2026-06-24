@@ -3,49 +3,21 @@ export default function AuthLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   return (
+    <div className="bg-[#f7f5f2]">
 
-    <div
-      className="
-      min-h-screen
+      {/* navbar safe zone */}
 
-      bg-[#f7f4ef]
+      <div className="pt-20">
 
-      overflow-x-hidden
-    "
-    >
+        <div className="min-h-[calc(100vh-80px)]">
 
-      {/* subtle editorial grain */}
+          {children}
 
-      <div
-        className="
-        absolute
-
-        inset-0
-
-        opacity-[0.03]
-
-        pointer-events-none
-      "
-      />
-
-      {/* content */}
-
-      <div
-        className="
-        relative
-
-        min-h-screen
-      "
-      >
-
-        {children}
+        </div>
 
       </div>
 
     </div>
-
   );
-
 }

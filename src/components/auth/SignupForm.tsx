@@ -1,19 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
-
 import { useRouter } from "next/navigation";
-
 import { supabase } from "@/lib/supabase";
 
-import Image from "next/image";
-
-import Link from "next/link";
-
-import { Eye } from "lucide-react";
-
 export default function SignupForm() {
-
   const router = useRouter();
 
   const [name, setName] = useState("");
@@ -23,453 +15,195 @@ export default function SignupForm() {
   const [password, setPassword] = useState("");
 
   async function submit(e: React.FormEvent) {
-
     e.preventDefault();
 
     const { error } = await supabase.auth.signUp({
-
       email,
-
       password,
 
       options: {
-
         data: {
-
           name,
-
         },
-
       },
-
     });
 
     if (!error) {
-
       router.push("/auth/login");
-
     }
-
   }
 
   return (
-
-    <div className="min-h-screen bg-[#f7f4ef] flex overflow-hidden">
-
-      {/* LEFT SIDEBAR */}
-
-      <aside
-        className="
-        hidden
-
-        lg:flex
-
-        w-[120px]
-
-        border-r
-
-        border-black/10
-
-        flex-col
-
-        justify-between
-
-        py-12
-
-        px-8
-      "
-      >
-
-        <div>
-
-          <h1
-            className="
-            text-5xl
-
-            tracking-[0.4em]
-
-            font-light
-          "
-          >
-
-            DIE
-
-          </h1>
-
-        </div>
-
-        <div
-          className="
-          text-[11px]
-
-          uppercase
-
-          tracking-[0.4em]
-
-          space-y-5
-
-          text-black/60
-        "
-        >
-
-          <Link href="/shop">
-
-            shop
-
-          </Link>
-
-          <Link href="/collections">
-
-            collections
-
-          </Link>
-
-          <Link href="/journal">
-
-            journal
-
-          </Link>
-
-          <Link href="/about">
-
-            about
-
-          </Link>
-
-        </div>
-
-        <div
-          className="
-          text-[10px]
-
-          uppercase
-
-          tracking-[0.4em]
-
-          text-black/40
-        "
-        >
-
-          © die 2026
-
-        </div>
-
-      </aside>
+    <div className="w-full min-h-[calc(100vh-80px)] flex bg-[#f7f5f2]">
 
       {/* IMAGE */}
 
-      <div
-        className="
-        hidden
-
-        lg:block
-
-        w-[40%]
-
-        relative
-      "
-      >
+      <div className="hidden lg:block w-[45%] relative">
 
         <Image
-
           src="/images/signup.jpg"
-
           alt="Editorial"
-
           fill
-
           priority
-
-          className="object-cover"
-
+          className="object-cover object-center"
         />
 
       </div>
 
-      {/* RIGHT */}
+      {/* FORM */}
 
-      <section
-        className="
-        flex-1
-
-        relative
-
-        px-10
-
-        md:px-20
-
-        py-14
-      "
-      >
-
-        {/* TOP */}
-
-        <div className="flex justify-between mb-14">
-
-          <p
-            className="
-            text-[10px]
-
-            uppercase
-
-            tracking-[0.5em]
-
-            opacity-50
-          "
-          >
-
-            join the house
-
-          </p>
-
-          <p
-            className="
-            text-[10px]
-
-            uppercase
-
-            tracking-[0.5em]
-
-            opacity-50
-          "
-          >
-
-            membership portal
-
-          </p>
-
-        </div>
-
-        {/* HEADLINE */}
-
-        <h1
-          className="
-          text-6xl
-
-          md:text-[8rem]
-
-          leading-[0.9]
-
-          tracking-[-0.08em]
-
-          font-extralight
-
-          max-w-4xl
-
-          mb-10
-        "
-        >
-
-          Become Part
-
-          <br />
-
-          of Our World
-
-        </h1>
-
-        <p
-          className="
-          max-w-lg
-
-          text-black/50
-
-          leading-8
-
-          mb-20
-        "
-        >
-
-          Sign up for early access to new collections,
-
-          exclusive releases and stories from the house.
-
-        </p>
-
-        {/* FORM */}
+      <div className="w-full lg:w-[55%] flex items-center justify-center px-10 md:px-20">
 
         <form
           onSubmit={submit}
-          className="max-w-3xl space-y-10"
+          className="w-full max-w-xl space-y-10"
         >
 
-          <div>
+          <div className="space-y-6">
 
-            <label
+            <p className="uppercase tracking-[0.35em] text-[10px] text-black/40">
+
+              join the house
+
+            </p>
+
+            <h1
               className="
-              text-[10px]
+              text-6xl
 
-              uppercase
+              md:text-7xl
 
-              tracking-[0.5em]
+              lg:text-[6.5rem]
 
-              mb-4
+              font-extralight
 
-              block
+              leading-[0.9]
+
+              tracking-[-0.08em]
             "
             >
 
-              Full Name
+              Become Part
 
-            </label>
+              <br />
 
-            <input
+              of Our World
 
-              type="text"
+            </h1>
 
-              required
+            <p className="text-lg leading-9 text-black/50 max-w-lg">
 
-              value={name}
+              Sign up for early access to collections,
+              releases and editorial stories from the house.
 
-              onChange={(e) =>
-
-                setName(e.target.value)
-              }
-
-              placeholder="Enter your full name"
-
-              className="
-              w-full
-
-              border
-
-              border-black/10
-
-              px-6
-
-              py-5
-
-              outline-none
-
-              bg-transparent
-            "
-
-            />
+            </p>
 
           </div>
 
-          <div>
+          <div className="space-y-8">
 
-            <label
-              className="
-              text-[10px]
+            <div>
 
-              uppercase
+              <label className="uppercase text-[10px] tracking-[0.35em]">
 
-              tracking-[0.5em]
+                Full Name
 
-              mb-4
-
-              block
-            "
-            >
-
-              Email
-
-            </label>
-
-            <input
-
-              type="email"
-
-              required
-
-              value={email}
-
-              onChange={(e) =>
-
-                setEmail(e.target.value)
-              }
-
-              placeholder="Enter your email"
-
-              className="
-              w-full
-
-              border
-
-              border-black/10
-
-              px-6
-
-              py-5
-
-              outline-none
-
-              bg-transparent
-            "
-
-            />
-
-          </div>
-
-          <div>
-
-            <label
-              className="
-              text-[10px]
-
-              uppercase
-
-              tracking-[0.5em]
-
-              mb-4
-
-              block
-            "
-            >
-
-              Password
-
-            </label>
-
-            <div className="relative">
+              </label>
 
               <input
-
-                type="password"
-
                 required
-
-                value={password}
-
-                onChange={(e) =>
-
-                  setPassword(e.target.value)
-                }
-
-                placeholder="Create a password"
-
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Enter your full name"
                 className="
                 w-full
+
+                h-16
+
+                mt-3
+
+                px-6
 
                 border
 
                 border-black/10
 
-                px-6
-
-                py-5
+                bg-transparent
 
                 outline-none
 
-                bg-transparent
+                focus:border-black
               "
-
               />
 
-              <Eye
-                size={18}
+            </div>
+
+            <div>
+
+              <label className="uppercase text-[10px] tracking-[0.35em]">
+
+                Email
+
+              </label>
+
+              <input
+                required
+                type="email"
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
                 className="
-                absolute
+                w-full
 
-                right-6
+                h-16
 
-                top-1/2
+                mt-3
 
-                -translate-y-1/2
+                px-6
 
-                opacity-40
+                border
+
+                border-black/10
+
+                bg-transparent
+
+                outline-none
+
+                focus:border-black
+              "
+              />
+
+            </div>
+
+            <div>
+
+              <label className="uppercase text-[10px] tracking-[0.35em]">
+
+                Password
+
+              </label>
+
+              <input
+                required
+                type="password"
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Create a password"
+                className="
+                w-full
+
+                h-16
+
+                mt-3
+
+                px-6
+
+                border
+
+                border-black/10
+
+                bg-transparent
+
+                outline-none
+
+                focus:border-black
               "
               />
 
@@ -477,23 +211,21 @@ export default function SignupForm() {
 
           </div>
 
-          {/* BUTTON */}
-
           <button
             className="
             w-full
+
+            h-16
 
             bg-black
 
             text-white
 
-            py-6
-
             uppercase
 
-            tracking-[0.45em]
-
             text-xs
+
+            tracking-[0.35em]
 
             hover:opacity-90
 
@@ -501,56 +233,26 @@ export default function SignupForm() {
           "
           >
 
-            continue →
+            Continue →
 
           </button>
 
-          <p className="text-xs text-black/40">
+          <div className="flex flex-wrap gap-8 text-[10px] uppercase tracking-[0.35em] text-black/40 pt-6">
 
-            By creating an account you agree to our
+            <p>early access</p>
 
-            Terms & Conditions and Privacy Policy.
+            <p>exclusive benefits</p>
 
-          </p>
+            <p>private events</p>
+
+            <p>member stories</p>
+
+          </div>
 
         </form>
 
-        {/* BOTTOM */}
-
-        <div
-          className="
-          mt-24
-
-          flex
-
-          flex-wrap
-
-          gap-10
-
-          text-[10px]
-
-          uppercase
-
-          tracking-[0.5em]
-
-          text-black/40
-        "
-        >
-
-          <p>early access</p>
-
-          <p>exclusive benefits</p>
-
-          <p>private events</p>
-
-          <p>member stories</p>
-
-        </div>
-
-      </section>
+      </div>
 
     </div>
-
   );
-
 }
