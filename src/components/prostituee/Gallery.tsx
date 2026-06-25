@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const images = [
-  "/images/prostituee/image1.jpg",
-  "/images/prostituee/image2.jpg",
-  "/images/prostituee/image3.jpg",
+  "/images/prostituee/image5.jpg",
+  "/images/prostituee/image6.jpg",
+  "/images/prostituee/image7.jpg",
 ];
 
 export default function Gallery() {

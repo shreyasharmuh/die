@@ -2,15 +2,15 @@ import Image from "next/image";
 
 const campaigns = [
   {
-    image: "/images/collaborations/adidas-originals/image7.jpg",
+    image: "/images/collaborations/adidas-originals/uniform3.jpg",
     title: "uniform 001",
   },
   {
-    image: "/images/collaborations/adidas-originals/hi1.jpg",
+    image: "/images/collaborations/adidas-originals/uniform2.jpg",
     title: "uniform 002",
   },
   {
-    image: "/images/collaborations/adidas-originals/image2.jpg",
+    image: "/images/collaborations/adidas-originals/uniform1.jpg",
     title: "uniform 003",
   },
 ];
