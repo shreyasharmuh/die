@@ -31,7 +31,7 @@ export default function AboutPage() {
         <div className="relative overflow-hidden">
 
           <Image
-            src="/images/sec.jpg"
+            src="/images/aboutlookbook.jpg"
             alt="DIE"
             width={2000}
             height={1200}
@@ -138,7 +138,7 @@ export default function AboutPage() {
         <div className="relative min-h-[800px]">
 
           <Image
-            src="/images/lookbook.jpg"
+            src="/images/abouthero.jpg"
             alt="Craftsmanship"
             fill
             className="object-cover"
