@@ -42,7 +42,7 @@ export default function Hero() {
         <div className="relative h-[450px] md:h-[800px]">
 
           <Image
-            src="/images/collaborations/off-white/hero.jpg"
+            src="/images/collaborations/off-white/off-white1.svg"
             alt=""
             fill
             priority
