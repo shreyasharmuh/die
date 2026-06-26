@@ -57,12 +57,6 @@ export default function Hero() {
 
             <div className="space-y-4">
 
-              <p className="text-[9px] tracking-[0.65em] uppercase opacity-60">
-
-                ensuisse™
-
-              </p>
-
               <p className="text-[9px] tracking-[0.5em] uppercase opacity-40">
 
                 a subsidiary of die
