@@ -18,7 +18,7 @@ export const collaborations: Collaboration[] = [
     name: "Off-White™",
     status: "ACTIVE",
     type: "logo",
-    logo: "/images/collaborations/off-white/logo.png",
+    logo: "/images/collaborations/off-white/off-white.svg",
   },
 
   {
