@@ -50,7 +50,7 @@ export default function Hero() {
         <div className="relative h-[450px] md:h-[750px] overflow-hidden">
 
           <Image
-            src="/images/atheiste/hero.jpg"
+            src="/images/atheiste/hero3.jpg"
             alt="ATHÉISTE"
             fill
             priority

@@ -1,212 +1,173 @@
 import { notFound } from "next/navigation";
 import { collaborations } from "@/data/collaborations";
 
-/* -----------------------------------
-CALVIN KLEIN
------------------------------------ */
+/* ===========================
+   CALVIN KLEIN
+=========================== */
 
-import Hero from "@/components/collaborations/calvin-klein/Hero";
-import Intro from "@/components/collaborations/calvin-klein/Intro";
-import CampaignGallery from "@/components/collaborations/calvin-klein/CampaignGallery";
-import Categories from "@/components/collaborations/calvin-klein/Categories";
-import EditorialSpread from "@/components/collaborations/calvin-klein/EditorialSpread";
+import CKHero from "@/components/collaborations/calvin-klein/Hero";
+import CKIntro from "@/components/collaborations/calvin-klein/Intro";
+import CKCampaignGallery from "@/components/collaborations/calvin-klein/CampaignGallery";
+import CKCategories from "@/components/collaborations/calvin-klein/Categories";
+import CKEditorialSpread from "@/components/collaborations/calvin-klein/EditorialSpread";
 
-/* -----------------------------------
-ADIDAS ORIGINALS
------------------------------------ */
+/* ===========================
+   ADIDAS ORIGINALS
+=========================== */
 
 import AdidasHero from "@/components/collaborations/adidas-originals/Hero";
 import AdidasManifesto from "@/components/collaborations/adidas-originals/Manifesto";
-import Gallery from "@/components/collaborations/adidas-originals/Gallery";
-import FutureArchive from "@/components/collaborations/adidas-originals/FutureArchive";
+import AdidasGallery from "@/components/collaborations/adidas-originals/Gallery";
+import AdidasFutureArchive from "@/components/collaborations/adidas-originals/FutureArchive";
 import AdidasTheNewUniform from "@/components/collaborations/adidas-originals/TheNewUniform";
-import ArchiveAccess from "@/components/collaborations/adidas-originals/ArchiveAccess";
+import AdidasArchiveAccess from "@/components/collaborations/adidas-originals/ArchiveAccess";
 
-/* -----------------------------------
-OFF-WHITE™
------------------------------------ */
+/* ===========================
+   OFF-WHITE™
+=========================== */
 
 import OffWhiteHero from "@/components/collaborations/off-white/Hero";
-import ArchiveManifesto from "@/components/collaborations/off-white/ArchiveManifesto";
-import ResearchSystem from "@/components/collaborations/off-white/ResearchSystem";
-import ArchiveIndex from "@/components/collaborations/off-white/ArchiveIndex";
-import ArchiveGrid from "@/components/collaborations/off-white/ArchiveGrid";
-import References from "@/components/collaborations/off-white/References";
+import OffWhiteArchiveManifesto from "@/components/collaborations/off-white/ArchiveManifesto";
+import OffWhiteResearchSystem from "@/components/collaborations/off-white/ResearchSystem";
+import OffWhiteArchiveIndex from "@/components/collaborations/off-white/ArchiveIndex";
+import OffWhiteArchiveGrid from "@/components/collaborations/off-white/ArchiveGrid";
+import OffWhiteReferences from "@/components/collaborations/off-white/References";
 import OffWhiteFooter from "@/components/collaborations/off-white/Footer";
 
-/* -----------------------------------
-BALENCIAGA
------------------------------------ */
+/* ===========================
+   BALENCIAGA
+=========================== */
 
 import BalenciagaHero from "@/components/collaborations/balenciaga/Hero";
-
 import BalenciagaManifesto from "@/components/collaborations/balenciaga/Manifesto";
-
 import BalenciagaTheNewUniform from "@/components/collaborations/balenciaga/TheNewUniform";
-
-import RunwayArchive from "@/components/collaborations/balenciaga/RunwayArchive";
-
+import BalenciagaRunwayArchive from "@/components/collaborations/balenciaga/RunwayArchive";
 import BalenciagaEditorialCampaign from "@/components/collaborations/balenciaga/EditorialCampaign";
-
 import BalenciagaObjects from "@/components/collaborations/balenciaga/Objects";
-
 import BalenciagaFooter from "@/components/collaborations/balenciaga/Footer";
 
+/* ===========================
+   SAINT LAURENT
+=========================== */
+
 import SaintLaurentHero from "@/components/collaborations/saint-laurent/Hero";
-
-import Manifesto from "@/components/collaborations/saint-laurent/Manifesto";
-
-import BeautyCodes from "@/components/collaborations/saint-laurent/BeautyCodes";
-
-import EditorialCampaign from "@/components/collaborations/saint-laurent/EditorialCampaign";
-
-import AtelierNotes from "@/components/collaborations/saint-laurent/AtelierNotes";
-
-import ObjectsOfDesire from "@/components/collaborations/saint-laurent/ObjectsOfDesire";
-
+import SaintLaurentManifesto from "@/components/collaborations/saint-laurent/Manifesto";
+import SaintLaurentBeautyCodes from "@/components/collaborations/saint-laurent/BeautyCodes";
+import SaintLaurentEditorialCampaign from "@/components/collaborations/saint-laurent/EditorialCampaign";
+import SaintLaurentAtelierNotes from "@/components/collaborations/saint-laurent/AtelierNotes";
+import SaintLaurentObjectsOfDesire from "@/components/collaborations/saint-laurent/ObjectsOfDesire";
 import SaintLaurentFooter from "@/components/collaborations/saint-laurent/Footer";
 
-type Props = {
-  params: Promise<{
-    slug: string;
-  }>;
-};
+/* ===========================
+   BALMAIN
+=========================== */
 
-export default async function CollaborationPage({
-  params,
-}: Props) {
-  const { slug } = await params;
+import BalmainHero from "@/components/collaborations/balmain/Hero";
+import BalmainManifesto from "@/components/collaborations/balmain/Manifesto";
+import RunwayLooks from "@/components/collaborations/balmain/RunwayLooks";
+import HouseCodes from "@/components/collaborations/balmain/HouseCodes";
+import Craftsmanship from "@/components/collaborations/balmain/Craftsmanship";
+import Atelier from "@/components/collaborations/balmain/Atelier";
+import SignatureDetails from "@/components/collaborations/balmain/SignatureDetails";
+import EditorialStory from "@/components/collaborations/balmain/EditorialStory";
+import StyleGuide from "@/components/collaborations/balmain/StyleGuide";
+import Finale from "@/components/collaborations/balmain/Finale";
 
-  const collaboration = collaborations.find(
-    (item) => item.slug === slug
-  );
+/* -----------------------------------
+DIE × EA7 EMPORIO ARMANI
+----------------------------------- */
 
-  if (!collaboration) {
-    notFound();
-  }
+import EA7Hero from "@/components/collaborations/ea7/Hero";
+import Philosophy from "@/components/collaborations/ea7/Philosophy";
+import Categories from "@/components/collaborations/ea7/Categories";
+import Innovation from "@/components/collaborations/ea7/Innovation";
+import Editorial from "@/components/collaborations/ea7/Editorial";
+import TheUniform from "@/components/collaborations/ea7/TheUniform";
+import PerformanceObjects from "@/components/collaborations/ea7/PerformanceObjects";
+import AthleteSystem from "@/components/collaborations/ea7/AthleteSystem";
+import ManifestoQuote from "@/components/collaborations/ea7/ManifestoQuote";
+import EA7Footer from "@/components/collaborations/ea7/Footer";
+import Collection from "@/components/collaborations/balmain/Collections";
 
-  /* -----------------------------------
-  COMING SOON
-  ----------------------------------- */
 
-  if (collaboration.status === "coming-soon") {
-    return (
-      <main className="min-h-screen bg-black text-white flex items-center justify-center px-6">
 
-        <div className="text-center">
 
-          <h1 className="text-6xl md:text-[10rem] font-light leading-none uppercase">
-            {collaboration.name}
-          </h1>
-
-          <div className="my-10 text-5xl opacity-40">
-            ×
-          </div>
-
-          <h2 className="text-6xl md:text-[10rem] font-light leading-none uppercase">
-            die
-          </h2>
-
-          <p className="mt-12 text-xs tracking-[0.5em] uppercase opacity-50">
-            coming soon
-          </p>
-
-          <p className="mt-4 text-sm opacity-40">
-            stay tuned
-          </p>
-
-        </div>
-
-      </main>
-    );
-  }
-
-  /* -----------------------------------
-  DIE × CALVIN KLEIN
-  ----------------------------------- */
+export default function Page({ params }: { params: { slug: string } }) {
+  const { slug } = params;
 
   if (slug === "die-x-calvin-klein") {
     return (
-      <main className="bg-white text-black">
+      <main className="bg-white text-black overflow-x-hidden">
 
-        <Hero />
+        <CKHero />
 
-        <Intro />
+        <CKIntro />
 
-        <CampaignGallery />
+        <CKCampaignGallery />
 
-        <Categories />
+        <CKCategories />
 
-        <EditorialSpread />
+        <CKEditorialSpread />
 
       </main>
     );
   }
-
-  /* -----------------------------------
-  DIE × ADIDAS ORIGINALS
-  ----------------------------------- */
 
   if (slug === "die-x-adidas-originals") {
     return (
-      <main className="bg-black text-white">
+      <main className="bg-black text-white overflow-x-hidden">
 
         <AdidasHero />
 
-        <Manifesto />
+        <AdidasManifesto />
 
-        <Gallery />
+        <AdidasGallery />
 
-        <FutureArchive />
+        <AdidasFutureArchive />
 
         <AdidasTheNewUniform />
 
-        <ArchiveAccess />
+        <AdidasArchiveAccess />
 
       </main>
     );
   }
-
-  /* -----------------------------------
-  DIE × OFF-WHITE™
-  ----------------------------------- */
 
   if (slug === "die-x-off-white") {
-    return (
-      <main className="bg-[#fafafa] text-black overflow-x-hidden">
+  return (
+    <main className="bg-[#fafafa] text-black overflow-x-hidden">
 
-        <OffWhiteHero />
+      <OffWhiteHero />
 
-        <ArchiveManifesto />
+      <OffWhiteArchiveManifesto />
 
-        <ResearchSystem />
+      <OffWhiteResearchSystem />
 
-        <ArchiveIndex />
+      <OffWhiteArchiveIndex />
 
-        <ArchiveGrid />
+      <OffWhiteArchiveGrid />
 
-        <References />
+      <OffWhiteReferences />
 
-        <OffWhiteFooter />
+      <OffWhiteFooter />
 
-      </main>
-    );
-  }
+    </main>
+  );
+}
 
-
-  if (slug === "die-x-balenciaga") {
+if (slug === "die-x-balenciaga") {
   return (
     <main className="bg-black text-white overflow-x-hidden">
 
-      <Hero />
+      <BalenciagaHero />
 
-      <Manifesto />
+      <BalenciagaManifesto />
 
       <BalenciagaTheNewUniform />
 
-      <RunwayArchive />
+      <BalenciagaRunwayArchive />
 
-      <EditorialCampaign />
+      <BalenciagaEditorialCampaign />
 
       <BalenciagaObjects />
 
@@ -216,27 +177,88 @@ export default async function CollaborationPage({
   );
 }
 
-
 if (slug === "die-x-ysl") {
   return (
     <main className="bg-black text-white overflow-x-hidden">
 
       <SaintLaurentHero />
 
-      <Manifesto />
+      <SaintLaurentManifesto />
 
-      <BeautyCodes />
+      <SaintLaurentBeautyCodes />
 
-      <EditorialCampaign />
+      <SaintLaurentEditorialCampaign />
 
-      <AtelierNotes />
+      <SaintLaurentAtelierNotes />
 
-      <ObjectsOfDesire />
+      <SaintLaurentObjectsOfDesire />
 
       <SaintLaurentFooter />
 
     </main>
   );
 }
-  return null;
+
+if (slug === "die-x-balmain") {
+  return (
+    <main className="bg-[#f7f3ec] text-black overflow-x-hidden">
+
+      <BalmainHero />
+
+      <BalmainManifesto />
+
+      <Collection />
+
+      <RunwayLooks />
+
+      <HouseCodes />
+
+      <Craftsmanship />
+
+      <Atelier />
+
+      <SignatureDetails />
+
+      <EditorialStory />
+
+      <StyleGuide />
+
+      <Finale />
+
+    </main>
+  );
+}
+
+/* -----------------------------------
+DIE × EA7 EMPORIO ARMANI
+----------------------------------- */
+if (slug === "die-x-emporio-armani") {
+  return (
+    <main className="bg-white text-black overflow-x-hidden">
+
+      <EA7Hero />
+
+      <Philosophy />
+
+      <Categories />
+
+      <Innovation />
+
+      <Editorial />
+
+      <TheUniform />
+
+      <PerformanceObjects />
+
+      <AthleteSystem />
+
+      <ManifestoQuote />
+
+      <EA7Footer />
+
+    </main>
+  );
+}
+
+  return notFound();
 }

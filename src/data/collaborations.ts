@@ -44,15 +44,14 @@ export const collaborations: Collaboration[] = [
   {
     slug: "die-x-balmain",
     name: "Balmain",
-    status: "coming-soon",
+    status: "ACTIVE",
   },
 
-  {
-    slug: "die-x-emporio-armani",
-    name: "Emporio Armani",
-    status: "coming-soon",
-  },
-
+{
+  slug: "die-x-emporio-armani",
+  name: "EA7 Emporio Armani",
+  status: "ACTIVE",
+},
   {
     slug: "die-x-aston-martin",
     name: "Aston Martin Aramco",
