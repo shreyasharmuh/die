@@ -89,11 +89,33 @@ import ManifestoQuote from "@/components/collaborations/ea7/ManifestoQuote";
 import EA7Footer from "@/components/collaborations/ea7/Footer";
 import Collection from "@/components/collaborations/balmain/Collections";
 
+import AstonMartinHero from "@/components/collaborations/aston-martin/Hero";
+import AstonMartinManifesto from "@/components/collaborations/aston-martin/Manifesto";
+import AstonMartinEngineering from "@/components/collaborations/aston-martin/Engineering";
+import AstonMartinCategories from "@/components/collaborations/aston-martin/Categories";
+import AstonMartinRaceWeekend from "@/components/collaborations/aston-martin/RaceWeekend";
+import AstonMartinAerodynamics from "@/components/collaborations/aston-martin/Aerodynamics";
+import AstonMartinEditorial from "@/components/collaborations/aston-martin/Editorial";
+import AstonMartinDriverEquipment from "@/components/collaborations/aston-martin/DriverEquipment";
+import AstonMartinMaterials from "@/components/collaborations/aston-martin/Materials";
+import AstonMartinEngineeringProcess from "@/components/collaborations/aston-martin/EngineeringProcess";
+import AstonMartinJournal from "@/components/collaborations/aston-martin/Journal";
+import AstonMartinGallery from "@/components/collaborations/aston-martin/Gallery";
+import AstonMartinFinalStatement from "@/components/collaborations/aston-martin/FinalStatement";
+import AstonMartinFooter from "@/components/collaborations/aston-martin/Footer";
 
 
 
-export default function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+type Props = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
+export default async function Page({
+  params,
+}: Props) {
+  const { slug } = await params;
 
   if (slug === "die-x-calvin-klein") {
     return (
@@ -255,6 +277,42 @@ if (slug === "die-x-emporio-armani") {
       <ManifestoQuote />
 
       <EA7Footer />
+
+    </main>
+  );
+}
+
+if (slug === "die-x-aston-martin") {
+  return (
+    <main className="bg-white text-black overflow-x-hidden">
+
+      <AstonMartinHero />
+
+      <AstonMartinManifesto />
+
+      <AstonMartinEngineering />
+
+      <AstonMartinCategories />
+
+      <AstonMartinRaceWeekend />
+
+      <AstonMartinAerodynamics />
+
+      <AstonMartinEditorial />
+
+      <AstonMartinDriverEquipment />
+
+      <AstonMartinMaterials />
+
+      <AstonMartinEngineeringProcess />
+
+      <AstonMartinJournal />
+
+      <AstonMartinGallery />
+
+      <AstonMartinFinalStatement />
+
+      <AstonMartinFooter />
 
     </main>
   );

@@ -40,14 +40,14 @@ const collaborations: Collaboration[] = [
   {
     name: "die × balmain",
     slug: "die-x-balmain",
-    status: "coming-soon",
+    status: "active",
   },
 
-  {
-    name: "die × emporio armani",
-    slug: "die-x-emporio-armani",
-    status: "coming-soon",
-  },
+{
+  name: "die × emporio armani",
+  slug: "die-x-emporio-armani",
+  status: "active",
+},
 
   {
     name: "die × aston martin aramco",

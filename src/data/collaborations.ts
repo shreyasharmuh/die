@@ -55,6 +55,6 @@ export const collaborations: Collaboration[] = [
   {
     slug: "die-x-aston-martin",
     name: "Aston Martin Aramco",
-    status: "coming-soon",
+    status: "ACTIVE",
   },
 ];
