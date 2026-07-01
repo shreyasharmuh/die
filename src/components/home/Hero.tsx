@@ -15,7 +15,7 @@ export default function Hero() {
       >
 
         <source
-          src="https://res.cloudinary.com/dnrvcl5s7/video/upload/v1781410260/hero1_yf8xji.mp4" />
+          src="https://res.cloudinary.com/dnrvcl5s7/video/upload/v1782894881/6474635-uhd_4096_2160_25fps_ub4mus.mp4" />
       </video>
 
       {/* DARK OVERLAY */}

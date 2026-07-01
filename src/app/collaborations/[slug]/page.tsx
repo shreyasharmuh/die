@@ -104,8 +104,6 @@ import AstonMartinGallery from "@/components/collaborations/aston-martin/Gallery
 import AstonMartinFinalStatement from "@/components/collaborations/aston-martin/FinalStatement";
 import AstonMartinFooter from "@/components/collaborations/aston-martin/Footer";
 
-
-
 type Props = {
   params: Promise<{
     slug: string;
@@ -116,6 +114,7 @@ export default async function Page({
   params,
 }: Props) {
   const { slug } = await params;
+
 
   if (slug === "die-x-calvin-klein") {
     return (

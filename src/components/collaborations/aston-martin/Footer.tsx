@@ -52,13 +52,12 @@ export default function Footer() {
           className="mt-10 text-white/50 text-sm md:text-base leading-relaxed max-w-2xl mx-auto"
         >
  This is not a collaboration defined by branding, but by structural intent. In{" "}
-partnership with{" "}
+          partnership with{" "}
+          <span className="text-white">
+            Aston Martin
+          </span>{" "}
+          and its Formula One division{" "}
 <span className="text-white">
-  :contentReference[oaicite:0]{index=0}
-</span>{" "}
-and its Formula One division{" "}
-<span className="text-white">
-  :contentReference[oaicite:1]{index=1}
 </span>
           , where performance is not represented — it is distilled into form,
           proportion, and controlled aggression.
