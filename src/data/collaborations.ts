@@ -25,7 +25,7 @@ export const collaborations: Collaboration[] = [
     status: "ACTIVE",
     category: "Sportswear",
     type: "logo",
-    logo: "/images/collaborations/adidas-originals/logo.svg",
+    logo: "/images/collaborations/adidas-originals/logo1.svg",
   },
 
   {
@@ -34,7 +34,7 @@ export const collaborations: Collaboration[] = [
     status: "ACTIVE",
     category: "Performance",
     type: "logo",
-    logo: "/images/collaborations/ea7/logo.svg",
+    logo: "/images/collaborations/ea7/ea7logo1.svg",
   },
 
   {
