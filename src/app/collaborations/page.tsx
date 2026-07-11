@@ -1,81 +1,25 @@
+import Image from "next/image";
 import Link from "next/link";
-
-type Collaboration = {
-  name: string;
-  slug: string;
-  status: "active" | "coming-soon";
-};
-
-const collaborations: Collaboration[] = [
-  {
-    name: "die × calvin klein",
-    slug: "die-x-calvin-klein",
-    status: "active",
-  },
-
-  {
-    name: "die × off-white™",
-    slug: "die-x-off-white",
-    status: "active",
-  },
-
-  {
-    name: "die × adidas originals",
-    slug: "die-x-adidas-originals",
-    status: "active",
-  },
-
-  {
-    name: "die × balenciaga",
-    slug: "die-x-balenciaga",
-    status: "active",
-  },
-
-  {
-    name: "die × ysl",
-    slug: "die-x-ysl",
-    status: "active",
-  },
-
-  {
-    name: "die × balmain",
-    slug: "die-x-balmain",
-    status: "active",
-  },
-
-{
-  name: "die × emporio armani",
-  slug: "die-x-emporio-armani",
-  status: "active",
-},
-
-  {
-    name: "die × aston martin aramco",
-    slug: "die-x-aston-martin",
-    status: "coming-soon",
-  },
-];
+import { collaborations } from "@/data/collaborations";
 
 export default function CollaborationsPage() {
   return (
-    <main className="min-h-screen bg-black text-white px-8 md:px-20 pt-40 pb-56">
+    <main className="min-h-screen bg-black text-white">
 
-      <div className="max-w-[1600px] mx-auto">
+      <div className="max-w-[1800px] mx-auto px-8 md:px-20 pt-40 pb-56">
 
         {/* MICRO LABEL */}
 
         <p
           className="
-          text-[9px]
+          text-[10px]
           uppercase
-          tracking-[0.7em]
-          opacity-40
+          tracking-[0.75em]
+          text-white/35
           mb-10
         "
         >
-
-          campaign archive
-
+          DIE® Collaboration Archive
         </p>
 
         {/* HERO */}
@@ -84,40 +28,38 @@ export default function CollaborationsPage() {
           className="
           text-6xl
           md:text-8xl
-          lg:text-[10rem]
+          xl:text-[10rem]
           font-extralight
-          tracking-[0.08em]
-          leading-none
-          mb-12
+          tracking-[-0.05em]
+          leading-[0.9]
+          max-w-5xl
         "
         >
-
-          collaborations
-
+          Collaborations
         </h1>
 
         <p
           className="
-          max-w-xl
-          text-xs
-          uppercase
-          tracking-[0.35em]
-          opacity-50
-          leading-8
-          mb-40
+          mt-12
+          max-w-2xl
+          text-white/45
+          leading-9
+          text-base
+          md:text-lg
         "
         >
-
-          a dialogue between die and
-          global fashion houses,
-          cultural institutions and
-          future archives.
-
+          The Collaboration Archive documents creative partnerships between
+          DIE and leading fashion houses, performance brands, luxury maisons,
+          beauty institutions and motorsport innovators.
         </p>
+
+        {/* DIVIDER */}
+
+        <div className="h-px bg-white/10 mt-24 mb-12" />
 
         {/* LIST */}
 
-        <div className="space-y-20">
+        <div>
 
           {collaborations.map((item) => (
 
@@ -127,45 +69,105 @@ export default function CollaborationsPage() {
               className="
               group
               flex
-              flex-col
-              md:flex-row
-              md:items-center
-              md:justify-between
-              gap-6
+              items-center
+              justify-between
+              py-12
               border-b
               border-white/10
-              pb-10
-            "
+              transition-all
+              duration-500
+              hover:border-white/30
+              "
             >
 
-              <h2
-                className="
-                text-3xl
-                md:text-6xl
-                font-extralight
-                tracking-[0.08em]
-                transition
-                duration-300
-                group-hover:translate-x-4
-              "
-              >
+              {/* LEFT */}
 
-                {item.name}
+              <div className="flex items-center gap-8">
 
-              </h2>
+                {/* BRAND LOGO */}
 
-              <span
-                className="
-                text-[9px]
-                uppercase
-                tracking-[0.7em]
-                opacity-40
-              "
-              >
+                {item.logo ? (
 
-                {item.status}
+                  <div className="relative w-[120px] h-[36px] opacity-80 group-hover:opacity-100 transition">
 
-              </span>
+                    <Image
+                      src={item.logo}
+                      alt={item.name}
+                      fill
+                      className="object-contain object-left"
+                    />
+
+                  </div>
+
+                ) : (
+
+                  <div className="w-[120px]" />
+
+                )}
+
+                {/* TITLE */}
+
+                <div>
+
+                  <h2
+                    className="
+                    text-3xl
+                    md:text-5xl
+                    font-extralight
+                    tracking-[0.08em]
+                    transition-all
+                    duration-500
+                    group-hover:translate-x-3
+                    "
+                  >
+                    {item.name}
+                  </h2>
+
+                  <p
+                    className="
+                    mt-5
+                    uppercase
+                    tracking-[0.45em]
+                    text-[10px]
+                    text-white/35
+                    "
+                  >
+                    {item.category}
+                  </p>
+
+                </div>
+
+              </div>
+
+              {/* RIGHT */}
+
+              <div className="flex items-center gap-12">
+
+                <p
+                  className="
+                  uppercase
+                  tracking-[0.55em]
+                  text-[10px]
+                  text-white/35
+                  "
+                >
+                  {item.status}
+                </p>
+
+                <span
+                  className="
+                  text-3xl
+                  text-white/25
+                  transition
+                  duration-500
+                  group-hover:translate-x-2
+                  group-hover:text-white
+                  "
+                >
+                  →
+                </span>
+
+              </div>
 
             </Link>
 
@@ -175,20 +177,34 @@ export default function CollaborationsPage() {
 
         {/* FOOTER */}
 
-        <div className="mt-56">
+        <div className="mt-56 border-t border-white/10 pt-12 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
 
           <p
             className="
-            text-[9px]
+            text-[10px]
+            uppercase
+            tracking-[0.6em]
+            text-white/30
+            "
+          >
+            DIE® Collaboration Archive · EST. 2026
+          </p>
+
+          <div
+            className="
+            flex
+            gap-10
+            text-[10px]
             uppercase
             tracking-[0.5em]
-            opacity-30
-          "
+            text-white/20
+            "
           >
-
-            die research laboratory • paris atelier • geneva studio • luxembourg house
-
-          </p>
+            <span>Luxury</span>
+            <span>Performance</span>
+            <span>Research</span>
+            <span>Archive</span>
+          </div>
 
         </div>
 

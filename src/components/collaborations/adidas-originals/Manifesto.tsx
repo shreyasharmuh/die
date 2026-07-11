@@ -1,52 +1,95 @@
 export default function Manifesto() {
   return (
-    <section className="bg-black text-white py-40">
+    <section className="bg-[#F7F7F4] text-black py-44 md:py-60">
 
-      <div className="max-w-7xl mx-auto px-8 md:px-16">
+      <div className="max-w-[1700px] mx-auto px-8 md:px-20">
 
-        <p className="text-[10px] tracking-[0.5em] uppercase opacity-40 mb-10">
-          archive 002
+        {/* Label */}
+
+        <p
+          className="
+          uppercase
+          tracking-[0.65em]
+          text-[10px]
+          text-black/35
+          mb-12
+          "
+        >
+          Manifesto
         </p>
 
-        <h2 className="text-6xl md:text-[10rem] leading-[0.9] font-extralight uppercase">
-          movement
+        {/* Headline */}
+
+        <h2
+          className="
+          text-5xl
+          md:text-7xl
+          xl:text-[8rem]
+          font-extralight
+          tracking-[-0.05em]
+          leading-[0.9]
+          max-w-5xl
+          "
+        >
+          Movement
           <br />
-          culture
+          becomes
           <br />
-          identity
+          identity.
         </h2>
 
-        <div className="mt-24 grid md:grid-cols-12 gap-12">
+        {/* Body */}
 
-          <div className="md:col-span-3">
-            <p className="text-xs tracking-[0.4em] uppercase opacity-40">
-              editorial note
-            </p>
-          </div>
+        <div className="grid lg:grid-cols-2 gap-20 mt-28">
 
-          <div className="md:col-span-9 max-w-4xl">
+          <p
+            className="
+            text-lg
+            leading-10
+            text-black/70
+            "
+          >
+            DIE × Adidas Originals explores a contemporary wardrobe shaped by
+            performance, precision and cultural permanence. Rather than
+            separating sport from luxury, the collaboration considers movement
+            as a universal design language—where garments are engineered with
+            intention and worn beyond the boundaries of competition.
+          </p>
 
-            <p className="text-2xl md:text-4xl font-light leading-relaxed">
-              DIE × Adidas Originals explores the
-              intersection between luxury,
-              architecture and contemporary
-              sportswear.
-            </p>
+          <p
+            className="
+            text-lg
+            leading-10
+            text-black/70
+            "
+          >
+            Drawing from the legacy of the Three Stripes and DIE’s editorial
+            philosophy, each silhouette balances technical innovation with
+            refined minimalism. Every detail is reduced to its essential form,
+            creating a collection designed for modern life while honoring the
+            heritage of performance design.
+          </p>
 
-            <p className="mt-10 text-white/60 leading-relaxed">
-              Inspired by concrete landscapes,
-              cultural movements and archival
-              silhouettes, the collection proposes
-              a new language for everyday uniforms.
-            </p>
+        </div>
 
-            <p className="mt-6 text-white/60 leading-relaxed">
-              Every garment exists between utility
-              and expression. Performance and
-              permanence. Sport and identity.
-            </p>
+        {/* Quote */}
 
-          </div>
+        <div className="mt-40 border-t border-black/10 pt-20">
+
+          <p
+            className="
+            text-3xl
+            md:text-5xl
+            font-extralight
+            leading-relaxed
+            tracking-[-0.03em]
+            max-w-5xl
+            "
+          >
+            "Performance is not a destination.
+            It is a continuous dialogue between
+            innovation, discipline and design."
+          </p>
 
         </div>
 
