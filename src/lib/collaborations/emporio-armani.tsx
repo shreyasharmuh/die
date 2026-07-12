@@ -8,30 +8,39 @@ import CampaignGallery from "@/components/collaborations/emporio-armani/Campaign
 import Collection from "@/components/collaborations/emporio-armani/Collection";
 import FinalStatement from "@/components/collaborations/emporio-armani/FinalStatement";
 import Footer from "@/components/collaborations/emporio-armani/Footer";
-import EditorialCampaign from "@/components/product/EditorialCampaign";
 
 export default function EmporioArmaniPage() {
   return (
     <main className="overflow-x-hidden bg-white text-black">
 
+      {/* Hero Video */}
       <Hero />
 
+      {/* Brand Manifesto */}
       <Manifesto />
 
-        <EditorialFilm />
+      {/* Cinematic Editorial Film */}
+      <EditorialFilm />
 
+      {/* Editorial Story */}
       <EditorialStory />
 
+      {/* Lookbook */}
       <Lookbook />
 
+      {/* Tailoring Philosophy */}
       <Tailoring />
 
+      {/* Campaign Archive */}
       <CampaignGallery />
 
+      {/* Collection */}
       <Collection />
 
+      {/* Closing Film */}
       <FinalStatement />
 
+      {/* Footer */}
       <Footer />
 
     </main>
