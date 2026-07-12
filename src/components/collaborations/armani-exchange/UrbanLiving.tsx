@@ -4,13 +4,13 @@ const lifestyle = [
   {
     number: "01",
     title: "Morning",
-    image: "/images/collaborations/armani-exchange/lifestyle1.jpg",
+    image: "/images/collaborations/armani-exchange/Lifestyle1.jpg",
     text: "Early sunlight, coffee, movement and contemporary simplicity."
   },
   {
     number: "02",
     title: "Afternoon",
-    image: "/images/collaborations/armani-exchange/lifestyle2.jpg",
+    image: "/images/collaborations/armani-exchange/Lifestyle2.jpg",
     text: "Architecture becomes part of the wardrobe."
   },
   {
@@ -53,17 +53,23 @@ export default function UrbanLiving() {
 
             <div key={item.number}>
 
-              <div className="overflow-hidden">
-
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={700}
-                  height={950}
-                  className="w-full h-[760px] object-cover hover:scale-105 transition duration-700"
-                />
-
-              </div>
+              <div className="overflow-hidden rounded-sm">
+  <Image
+    src={item.image}
+    alt={item.title}
+    width={900}
+    height={1200}
+    className="
+      w-full
+      aspect-[3/4]
+      object-cover
+      object-top
+      hover:scale-[1.025]
+      transition-all
+      duration-700
+    "
+  />
+</div>
 
               <p className="mt-8 uppercase tracking-[0.5em] text-[10px] text-black/35">
 

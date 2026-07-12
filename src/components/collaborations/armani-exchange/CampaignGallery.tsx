@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const gallery = [
-  "/images/collaborations/armani-exchange/gallery1.jpg",
+  "/images/collaborations/armani-exchange/gallery.jpg",
   "/images/collaborations/armani-exchange/gallery2.jpg",
   "/images/collaborations/armani-exchange/gallery3.jpg",
   "/images/collaborations/armani-exchange/gallery4.jpg",

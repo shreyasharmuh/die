@@ -105,24 +105,23 @@ export default function Collection() {
 
               {/* Image */}
 
-              <div className="overflow-hidden group">
+              <div className="relative aspect-[3/4] overflow-hidden group">
 
-                <Image
-                  src={look.image}
-                  alt={look.title}
-                  width={900}
-                  height={1200}
-                  className="
-                  w-full
-                  h-[850px]
-                  object-cover
-                  transition
-                  duration-700
-                  group-hover:scale-105
-                  "
-                />
+  <Image
+    src={look.image}
+    alt={look.title}
+    fill
+    className="
+      object-cover
+      object-top
+      transition-transform
+      duration-700
+      ease-out
+      group-hover:scale-[1.03]
+    "
+  />
 
-              </div>
+</div>
 
               {/* Text */}
 

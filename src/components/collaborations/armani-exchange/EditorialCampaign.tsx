@@ -44,7 +44,7 @@ export default function EditorialCampaign() {
         <div className="relative overflow-hidden">
 
           <Image
-            src="/images/collaborations/armani-exchange/editorial1.jpg"
+            src="/images/collaborations/armani-exchange/editorial3.jpg"
             alt="Editorial One"
             width={1800}
             height={1200}
@@ -94,7 +94,7 @@ export default function EditorialCampaign() {
           <div>
 
             <Image
-              src="/images/collaborations/armani-exchange/editorial2.jpg"
+              src="/images/collaborations/armani-exchange/editorial4.jpg"
               alt="Editorial Two"
               width={900}
               height={1200}

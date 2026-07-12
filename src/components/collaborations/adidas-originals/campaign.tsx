@@ -50,19 +50,18 @@ export default function Campaign() {
 
         </div>
 
-        {/* Large Image */}
+       <div className="relative mb-24 overflow-hidden rounded-none">
 
-        <div className="relative mb-24 overflow-hidden">
+  <Image
+    src="/images/collaborations/adidas-originals/editorial.jpg"
+    alt="Editorial Campaign"
+    width={2400}
+    height={1350}
+    className="w-full h-[90vh] object-cover object-center"
+    priority
+  />
 
-          <Image
-            src="/images/collaborations/adidas-originals/editorial1.jpg"
-            alt=""
-            width={2200}
-            height={1400}
-            className="w-full h-[85vh] object-cover"
-          />
-
-        </div>
+</div>
 
         {/* Editorial Grid */}
 

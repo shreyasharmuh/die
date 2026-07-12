@@ -17,20 +17,19 @@ export default function Hero() {
       {/* Overlay */}
 
       <div className="absolute inset-0 bg-black/45" />
+    {/* AX Logo */}
 
-      {/* AX Logo */}
+<div className="absolute top-12 left-1/2 -translate-x-1/2">
 
-      <div className="absolute top-12 left-1/2 -translate-x-1/2">
+  <Image
+    src="/images/collaborations/armani-exchange/logo.png"
+    alt="Armani Exchange"
+    width={170}
+    height={60}
+    className="opacity-95"
+  />
 
-        <Image
-          src="/images/collaborations/armani-exchange/logo.png"
-          alt="Armani Exchange"
-          width={170}
-          height={60}
-          className="opacity-95"
-        />
-
-      </div>
+</div>
 
       {/* Hero */}
 
@@ -53,26 +52,6 @@ export default function Hero() {
               Collaboration 002
 
             </p>
-
-            <h1
-              className="
-              text-white
-              font-extralight
-              leading-[0.88]
-              tracking-[-0.06em]
-              text-6xl
-              md:text-8xl
-              xl:text-[10rem]
-              "
-            >
-
-              DIE ×
-              <br />
-              Armani
-              <br />
-              Exchange
-
-            </h1>
 
             <div className="flex gap-10 mt-14">
 
