@@ -29,20 +29,6 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(0,0,0,.35)_100%)]" />
 
-      {/* Adidas Logo */}
-
-<div className="absolute top-32 md:top-36 left-0 right-0 z-20 flex justify-center">
-
-  <Image
-    src="/images/collaborations/adidas-originals/logo1.svg"
-    alt="Adidas Originals"
-    width={180}
-    height={64}
-    className="opacity-95"
-  />
-
-</div>
-
       {/* Editorial Content */}
 
       <div className="relative z-20 h-full">

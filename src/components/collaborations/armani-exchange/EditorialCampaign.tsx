@@ -19,7 +19,7 @@ export default function EditorialCampaign() {
             mb-8
             "
           >
-            Editorial Campaign
+            Summer Editorial
           </p>
 
           <h2
@@ -32,14 +32,14 @@ export default function EditorialCampaign() {
             leading-[0.9]
             "
           >
-            Metropolitan
+            Resort
             <br />
-            Stories.
+            Society.
           </h2>
 
         </div>
 
-        {/* Hero Editorial */}
+        {/* Hero */}
 
         <div className="relative overflow-hidden">
 
@@ -51,7 +51,7 @@ export default function EditorialCampaign() {
             className="w-full h-[900px] object-cover"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
 
           <div className="absolute bottom-20 left-20 max-w-2xl">
 
@@ -76,9 +76,9 @@ export default function EditorialCampaign() {
               tracking-[-0.04em]
               "
             >
-              Milan,
+              Summer,
               <br />
-              Reimagined.
+              Unscripted.
             </h3>
 
           </div>
@@ -109,9 +109,9 @@ export default function EditorialCampaign() {
               tracking-[-0.04em]
               "
             >
-              Contemporary
+              Off-Duty
+              <br />
               Luxury
-
             </h3>
 
             <p
@@ -121,11 +121,11 @@ export default function EditorialCampaign() {
               text-white/60
               "
             >
-
-              Clean architecture, refined tailoring and
-              contemporary movement become the foundation
-              of the collection.
-
+              Inspired by sunlit afternoons,
+              private clubs and effortless dressing.
+              Relaxed silhouettes and elevated
+              essentials create a wardrobe designed
+              for movement beyond the court.
             </p>
 
           </div>
@@ -135,7 +135,7 @@ export default function EditorialCampaign() {
           <div className="pt-32">
 
             <Image
-              src="/images/collaborations/armani-exchange/editorial3.jpg"
+              src="/images/collaborations/armani-exchange/editorial1.jpg"
               alt="Editorial Three"
               width={900}
               height={1200}
@@ -150,9 +150,9 @@ export default function EditorialCampaign() {
               tracking-[-0.04em]
               "
             >
-              Urban
-              Architecture
-
+              Resort
+              <br />
+              Rhythm
             </h3>
 
             <p
@@ -162,12 +162,11 @@ export default function EditorialCampaign() {
               text-white/60
               "
             >
-
-              The city becomes an extension
-              of the wardrobe, where fashion
-              and architecture exist as one
-              continuous visual language.
-
+              Between coastal mornings
+              and city evenings, every look
+              reflects modern ease,
+              understated confidence
+              and contemporary Italian lifestyle.
             </p>
 
           </div>

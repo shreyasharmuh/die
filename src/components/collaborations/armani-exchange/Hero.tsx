@@ -17,19 +17,7 @@ export default function Hero() {
       {/* Overlay */}
 
       <div className="absolute inset-0 bg-black/45" />
-    {/* AX Logo */}
 
-<div className="absolute top-12 left-1/2 -translate-x-1/2">
-
-  <Image
-    src="/images/collaborations/armani-exchange/logo.png"
-    alt="Armani Exchange"
-    width={170}
-    height={60}
-    className="opacity-95"
-  />
-
-</div>
 
       {/* Hero */}
 

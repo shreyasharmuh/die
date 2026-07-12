@@ -3,20 +3,20 @@ import Image from "next/image";
 const looks = [
   {
     no: "01",
-    title: "City Uniform",
-    subtitle: "Minimal Tailoring",
+    title: "Athletic Ease",
+    subtitle: "Athletic Uniform",
     image: "/images/collaborations/armani-exchange/collection1.jpg",
   },
   {
     no: "02",
-    title: "Concrete Silence",
+    title: "Transitional Layers",
     subtitle: "Urban Essentials",
     image: "/images/collaborations/armani-exchange/collection2.jpg",
   },
   {
     no: "03",
-    title: "Evening Motion",
-    subtitle: "Monochrome Layers",
+    title: "Athletic Minimalism",
+    subtitle: "Athletic Uniform",
     image: "/images/collaborations/armani-exchange/collection3.jpg",
   },
   {
@@ -161,23 +161,20 @@ export default function Collection() {
 
                 </p>
 
-                <p
-                  className="
-                  mt-14
-                  max-w-lg
-                  leading-10
-                  text-white/60
-                  "
-                >
-
-                  Inspired by metropolitan architecture,
-                  Italian tailoring and contemporary
-                  urban living. Every silhouette balances
-                  movement, proportion and understated
-                  luxury through carefully selected
-                  materials and refined construction.
-
-                </p>
+           <p
+  className="
+  mt-14
+  max-w-lg
+  leading-10
+  text-white/60
+  "
+>
+  Designed for mornings on the court and
+  afternoons in the city. Breathable fabrics,
+  sculpted silhouettes and understated details
+  create a refined wardrobe that moves
+  seamlessly between sport and lifestyle.
+</p>
 
               </div>
 

@@ -27,14 +27,23 @@ export const collaborations: Collaboration[] = [
     type: "logo",
     logo: "/images/collaborations/adidas-originals/logo1.svg",
   },
-
+  
+   {
+    slug: "die-x-armani-exchange",
+    name: "A|X Armani Exchange",
+    status: "ACTIVE",
+    category: "Lifestyle",
+    type: "logo",
+    logo: "/images/collaborations/armani-exchange/logo.png",
+  },
+  
   {
     slug: "die-x-emporio-armani",
     name: "EA7 Emporio Armani",
     status: "ACTIVE",
     category: "Performance",
     type: "logo",
-    logo: "/images/collaborations/ea7/ea7logo1.svg",
+    logo: "/images/collaborations/ea7/logo.png",
   },
 
   {
@@ -86,16 +95,6 @@ export const collaborations: Collaboration[] = [
   /* -------------------------
       COMING SOON
   -------------------------- */
-
-  {
-    slug: "die-x-armani-exchange",
-    name: "A|X Armani Exchange",
-    status: "coming-soon",
-    category: "Lifestyle",
-    type: "logo",
-    logo: "/images/collaborations/armani-exchange/logo.svg",
-  },
-
   {
     slug: "die-x-dior",
     name: "Dior",
@@ -129,7 +128,7 @@ export const collaborations: Collaboration[] = [
     status: "coming-soon",
     category: "Luxury",
     type: "logo",
-    logo: "/images/collaborations/amiri/logo.svg",
+    logo: "/images/collaborations/amiri/logo.png",
   },
 
   {
