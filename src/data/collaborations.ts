@@ -67,6 +67,8 @@ export const collaborations: Collaboration[] = [
     name: "Balenciaga",
     status: "ACTIVE",
     category: "Luxury",
+    type : "logo",
+    logo : "/images/collaborations/balenciaga/logo.png"
   },
 
   {
