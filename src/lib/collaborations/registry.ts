@@ -1,5 +1,8 @@
 import AdidasPage from "./adidas";
 import ArmaniExchangePage from "./armani-exchange";
+import EmporioArmaniPage from "./emporio-armani";
+import BalenciagaPage from "./balenciaga";
+
 // import NikePage from "./nike";
 // import DiorPage from "./dior";
 // import PumaPage from "./puma";
@@ -11,6 +14,10 @@ export const collaborationRegistry: Record<
   "die-x-adidas-originals": AdidasPage,
 
   "die-x-armani-exchange": ArmaniExchangePage,
+
+  "die-x-emporio-armani": EmporioArmaniPage,
+
+  "die-x-balenciaga": BalenciagaPage,
 
   // "die-x-nike": NikePage,
   // "die-x-dior": DiorPage,

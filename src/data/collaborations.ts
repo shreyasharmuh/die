@@ -39,11 +39,11 @@ export const collaborations: Collaboration[] = [
   
   {
     slug: "die-x-emporio-armani",
-    name: "EA7 Emporio Armani",
+    name: "Emporio Armani",
     status: "ACTIVE",
     category: "Performance",
     type: "logo",
-    logo: "/images/collaborations/ea7/logo.png",
+    logo: "/images/collaborations/ea7/ea7.png",
   },
 
   {
