@@ -64,25 +64,6 @@ export default function Hero() {
               Collaboration 001
             </p>
 
-            <h1
-              className="
-              font-extralight
-              leading-[0.88]
-              tracking-[-0.07em]
-              text-[58px]
-              sm:text-[74px]
-              md:text-[100px]
-              lg:text-[120px]
-              xl:text-[145px]
-            "
-            >
-              DIE ×
-              <br />
-              Adidas
-              <br />
-              Originals
-            </h1>
-
             <p
               className="
               mt-10
