@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen bg-black text-white overflow-hidden">
+    <section className="relative h-screen overflow-hidden bg-black text-white">
 
       {/* Background Video */}
 
@@ -14,7 +14,6 @@ export default function Hero() {
         loop
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
-        poster="/images/collaborations/adidas-originals/hero-poster.jpg"
       >
         <source
           src="https://res.cloudinary.com/dnrvcl5s7/video/upload/v1783733714/42086d3c2a6ed1db60829520e6f36a7c_azqvzo.mp4"
@@ -22,123 +21,136 @@ export default function Hero() {
         />
       </video>
 
-      {/* Overlay */}
+      {/* Luxury Overlay */}
 
-      <div className="absolute inset-0 bg-black/45" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/70" />
 
-      {/* Top */}
+      {/* subtle vignette */}
 
-      <div className="absolute top-10 left-0 right-0 z-20 flex justify-center">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(0,0,0,.35)_100%)]" />
+
+      {/* Adidas Originals Logo */}
+
+      <div className="absolute top-8 left-1/2 -translate-x-1/2 z-30">
 
         <Image
           src="/images/collaborations/adidas-originals/logo1.svg"
           alt="Adidas Originals"
-          width={120}
-          height={42}
-          className="opacity-90"
+          width={82}
+          height={32}
+          priority
+          className="opacity-95"
         />
 
       </div>
 
-      {/* Center */}
+      {/* Editorial Content */}
 
-      <div className="relative z-20 flex h-full flex-col items-center justify-center text-center px-8">
+      <div className="relative z-20 h-full">
 
-        <p
-          className="
-          uppercase
-          tracking-[0.7em]
-          text-[10px]
-          text-white/60
-          mb-8
-          "
-        >
-          DIE® Collaboration Archive
-        </p>
+        <div className="mx-auto flex h-full max-w-[1800px] items-center px-8 md:px-20">
 
-        <h1
-          className="
-          text-5xl
-          md:text-8xl
-          xl:text-[9rem]
-          font-extralight
-          tracking-[-0.05em]
-          leading-[0.9]
-          "
-        >
-          DIE ×
-          <br />
-          ADIDAS ORIGINALS
-        </h1>
+          <div className="max-w-[900px]">
 
-        <p
-          className="
-          mt-10
-          max-w-2xl
-          text-white/70
-          leading-9
-          text-lg
-          "
-        >
-          Performance is reimagined through contemporary tailoring,
-          technical innovation and the timeless language of the Three Stripes.
-        </p>
-
-        <div className="mt-16 flex items-center gap-8">
-
-          <span
-            className="
-            uppercase
-            tracking-[0.55em]
-            text-[10px]
-            text-white/50
+            <p
+              className="
+              mb-8
+              uppercase
+              tracking-[0.75em]
+              text-[10px]
+              text-white/55
             "
-          >
-            Performance
-          </span>
+            >
+              Collaboration 001
+            </p>
 
-          <span className="w-12 h-px bg-white/20" />
-
-          <span
-            className="
-            uppercase
-            tracking-[0.55em]
-            text-[10px]
-            text-white/50
+            <h1
+              className="
+              font-extralight
+              leading-[0.88]
+              tracking-[-0.07em]
+              text-[58px]
+              sm:text-[74px]
+              md:text-[100px]
+              lg:text-[120px]
+              xl:text-[145px]
             "
-          >
-            Archive
-          </span>
+            >
+              DIE ×
+              <br />
+              Adidas
+              <br />
+              Originals
+            </h1>
 
-          <span className="w-12 h-px bg-white/20" />
-
-          <span
-            className="
-            uppercase
-            tracking-[0.55em]
-            text-[10px]
-            text-white/50
+            <p
+              className="
+              mt-10
+              max-w-xl
+              text-[17px]
+              leading-9
+              text-white/65
             "
-          >
-            2027
-          </span>
+            >
+              A contemporary exploration of performance,
+              architecture and culture, redefining the
+              language of Originals through precision,
+              movement and timeless design.
+            </p>
+
+            <div className="mt-16 flex flex-wrap items-center gap-6">
+
+              <span className="uppercase tracking-[0.45em] text-[10px] text-white/40">
+
+                Performance
+
+              </span>
+
+              <span className="h-px w-10 bg-white/20" />
+
+              <span className="uppercase tracking-[0.45em] text-[10px] text-white/40">
+
+                Originals
+
+              </span>
+
+              <span className="h-px w-10 bg-white/20" />
+
+              <span className="uppercase tracking-[0.45em] text-[10px] text-white/40">
+
+                Archive
+
+              </span>
+
+              <span className="h-px w-10 bg-white/20" />
+
+              <span className="uppercase tracking-[0.45em] text-[10px] text-white/40">
+
+                2027
+
+              </span>
+
+            </div>
+
+          </div>
 
         </div>
 
       </div>
 
-      {/* Bottom */}
+      {/* Scroll Indicator */}
 
-      <div className="absolute bottom-12 left-0 right-0 z-20 flex justify-center">
+      <div className="absolute bottom-10 left-1/2 z-30 -translate-x-1/2 flex flex-col items-center">
+
+        <div className="mb-4 h-16 w-px bg-white/25" />
 
         <p
           className="
           uppercase
-          tracking-[0.7em]
-          text-[10px]
-          text-white/45
-          animate-pulse
-          "
+          tracking-[0.6em]
+          text-[9px]
+          text-white/35
+        "
         >
           Scroll
         </p>

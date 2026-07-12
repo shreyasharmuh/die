@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Background */}
 
       <Image
-        src="/images/collaborations/armani-exchange/hero.jpg"
+        src="/images/collaborations/armani-exchange/hero2.jpg"
         alt="DIE x Armani Exchange"
         fill
         priority
