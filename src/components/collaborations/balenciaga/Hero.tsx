@@ -56,21 +56,6 @@ export default function Hero() {
           DIE® Collaboration Archive
         </p>
 
-        <h1
-          className="
-          text-6xl
-          md:text-8xl
-          xl:text-[9rem]
-          font-extralight
-          tracking-[-0.07em]
-          leading-[0.88]
-          "
-        >
-          FOR
-          <br />
-          DIE
-        </h1>
-
         <p
           className="
           mt-14

@@ -1,32 +1,124 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#090909] text-white py-20">
+    <footer className="bg-[#111111] text-white">
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-20 flex flex-col md:flex-row justify-between gap-12">
+      <div className="max-w-[1850px] mx-auto px-10 py-40">
 
-        <div>
+        <div className="grid lg:grid-cols-2 gap-24">
 
-          <h2 className="text-4xl md:text-5xl font-extralight tracking-[0.14em]">
+          {/* Left */}
 
-            PROSTITUÉE
+          <div>
 
-          </h2>
+            <p
+              className="
+              uppercase
+              tracking-[0.7em]
+              text-[10px]
+              text-white/40
+              mb-10
+              "
+            >
+              Maison
+            </p>
+
+            <h2
+              className="
+              text-6xl
+              md:text-8xl
+              font-extralight
+              tracking-[-0.06em]
+              leading-[0.9]
+              "
+            >
+              PROSTITUTÉE
+            </h2>
+
+            <p
+              className="
+              mt-12
+              max-w-md
+              text-white/50
+              leading-8
+              "
+            >
+              Designed by DIE.
+
+              <br /><br />
+
+              Quiet luxury through intimate
+              essentials and timeless
+              silhouettes.
+            </p>
+
+          </div>
+
+          {/* Right */}
+
+          <div
+            className="
+            grid
+            grid-cols-2
+            gap-y-10
+            gap-x-20
+            self-end
+            "
+          >
+
+            <a className="uppercase tracking-[0.3em] text-[11px] hover:text-white/60 transition">
+              Collection
+            </a>
+
+            <a className="uppercase tracking-[0.3em] text-[11px] hover:text-white/60 transition">
+              Campaigns
+            </a>
+
+            <a className="uppercase tracking-[0.3em] text-[11px] hover:text-white/60 transition">
+              Journal
+            </a>
+
+            <a className="uppercase tracking-[0.3em] text-[11px] hover:text-white/60 transition">
+              About
+            </a>
+
+            <a className="uppercase tracking-[0.3em] text-[11px] hover:text-white/60 transition">
+              Contact
+            </a>
+
+            <a className="uppercase tracking-[0.3em] text-[11px] hover:text-white/60 transition">
+              Instagram
+            </a>
+
+          </div>
 
         </div>
 
-        <div className="space-y-4">
+        <div className="h-px bg-white/10 my-24" />
 
-          <p className="text-[10px] tracking-[0.45em] uppercase opacity-40">
+        <div className="flex justify-between items-center flex-wrap gap-8">
 
-            a subsidiary of die
-
+          <p
+            className="
+            uppercase
+            tracking-[0.4em]
+            text-[10px]
+            text-white/35
+            "
+          >
+            © 2027 DIE · PROSTITUTÉE
           </p>
 
-          <p className="text-[10px] tracking-[0.35em] uppercase opacity-30">
+          <p
+            className="
+            uppercase
+            tracking-[0.4em]
+            text-[10px]
+            text-white/35
+            "
+          >
+            Paris · Genève · Milano
+          </p>
 
-  paris atelier • geneva studio • luxembourg house
-
-</p>
         </div>
 
       </div>

@@ -25,19 +25,20 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-black/20" />
 
-      {/* Logo */}
+     {/* EA7 Logo */}
 
-      <div className="absolute top-32 md:top-36 left-1/2 -translate-x-1/2 z-20">
+<div className="absolute top-24 left-12 z-20">
 
-        <Image
-          src="/images/collaborations/ea7/ea7.png"
-          alt="Emporio Armani"
-          width={220}
-          height={80}
-          priority
-        />
+  <Image
+    src="/images/collaborations/ea7/ea7.png"
+    alt="EA7 Emporio Armani"
+    width={110}
+    height={40}
+    priority
+    className="opacity-95"
+  />
 
-      </div>
+</div>
 
       {/* Hero */}
 

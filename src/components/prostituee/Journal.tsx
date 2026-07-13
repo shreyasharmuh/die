@@ -1,39 +1,130 @@
-const entries = [
-  "private uniform",
+import Image from "next/image";
 
-  "second skin",
-
-  "after hours",
+const journal = [
+  {
+    number: "001",
+    title: "The Architecture of Quiet",
+    subtitle: "Paris",
+    image: "/images/prostituee/journal1.jpg",
+  },
+  {
+    number: "002",
+    title: "Morning Rituals",
+    subtitle: "Lake Como",
+    image: "/images/prostituee/journal2.jpg",
+  },
+  {
+    number: "003",
+    title: "Objects of Intimacy",
+    subtitle: "Tokyo",
+    image: "/images/prostituee/journal3.jpg",
+  },
 ];
 
 export default function Journal() {
   return (
-    <section className="bg-[#f7f4ef] text-black py-32">
+    <section className="bg-[#faf8f5] py-56">
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-20">
+      <div className="max-w-[1850px] mx-auto px-10">
 
-        <div className="space-y-12">
+        <div className="mb-36">
 
-          {entries.map((entry, index) => (
+          <p
+            className="
+            uppercase
+            tracking-[0.6em]
+            text-[10px]
+            text-neutral-400
+            mb-8
+            "
+          >
+            Journal
+          </p>
 
-            <div
-              key={entry}
-              className="flex flex-col md:flex-row justify-between border-b border-black/10 pb-10 gap-6"
+          <h2
+            className="
+            text-6xl
+            md:text-8xl
+            font-extralight
+            tracking-[-0.06em]
+            leading-[0.9]
+            max-w-5xl
+            "
+          >
+            Stories
+            <br />
+            beyond
+            <br />
+            the wardrobe.
+          </h2>
+
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-16">
+
+          {journal.map((story) => (
+
+            <article
+              key={story.number}
+              className="group cursor-pointer"
             >
 
-              <p className="text-[10px] tracking-[0.45em] opacity-40">
+              <div className="overflow-hidden">
 
-                0{index + 1}
+                <Image
+                  src={story.image}
+                  alt={story.title}
+                  width={700}
+                  height={900}
+                  className="
+                  w-full
+                  h-[700px]
+                  object-cover
+                  transition
+                  duration-700
+                  group-hover:scale-[1.03]
+                  "
+                />
 
-              </p>
+              </div>
 
-              <h2 className="text-xl sm:text-2xl md:text-4xl font-extralight tracking-[0.18em] uppercase">
+              <div className="pt-10">
 
-                {entry}
+                <p
+                  className="
+                  uppercase
+                  tracking-[0.45em]
+                  text-[10px]
+                  text-neutral-400
+                  mb-6
+                  "
+                >
+                  Volume {story.number}
+                </p>
 
-              </h2>
+                <h3
+                  className="
+                  text-4xl
+                  font-extralight
+                  tracking-[-0.04em]
+                  leading-tight
+                  "
+                >
+                  {story.title}
+                </h3>
 
-            </div>
+                <p
+                  className="
+                  mt-6
+                  text-neutral-500
+                  "
+                >
+                  {story.subtitle}
+                </p>
+
+              </div>
+
+            </article>
 
           ))}
 

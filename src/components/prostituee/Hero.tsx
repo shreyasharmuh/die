@@ -1,180 +1,178 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#090909] text-white">
+    <section className="relative h-screen overflow-hidden bg-[#F8F6F2] text-black">
 
-      {/* BACKGROUND IMAGE */}
+      {/* Background Video */}
 
-      <div className="absolute inset-0">
-
-        <Image
-          src="/images/prostituee/image8.jpg"
-          alt="PROSTITUTÉE"
-          fill
-          priority
-          className="object-cover object-center"
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source
+          src="/videos/prostituee/hero.mp4"
+          type="video/mp4"
         />
+      </video>
 
-        {/* OVERLAY */}
+      {/* Warm Overlay */}
 
-        <div className="absolute inset-0 bg-black/45" />
+      <div className="absolute inset-0 bg-[#F8F6F2]/30 backdrop-[brightness(0.92)]" />
 
-        {/* SOFT GRADIENT */}
+    {/* Brand Logo */}
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/70" />
+<div className="absolute top-10 left-1/2 -translate-x-1/2 z-20">
 
-      </div>
+  <Image
+    src="/images/prostituee/logo.svg"
+    alt="PROSTITUTÉE"
+    width={340}
+    height={36}
+    priority
+    className="opacity-95"
+  />
 
-      {/* HUGE BACKGROUND TYPOGRAPHY */}
+</div>
 
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      {/* Center Content */}
 
-        <h2
+      <div className="relative z-20 flex h-full flex-col items-center justify-center text-center px-8">
+
+        <h1
           className="
-          text-[22vw]
+          text-white
+          text-6xl
+          md:text-8xl
+          xl:text-[9rem]
           font-extralight
-          tracking-[0.18em]
-          text-white/[0.04]
-          whitespace-nowrap
-          select-none
-        "
+          tracking-[-0.08em]
+          leading-[0.88]
+          "
         >
-          ENSUISSE
-        </h2>
+          PROSTITUTÉE
+        </h1>
+
+        <p
+          className="
+          mt-10
+          uppercase
+          tracking-[0.65em]
+          text-[10px]
+          text-white/80
+          "
+        >
+          Lounge · Objects · Essentials
+        </p>
+
+        <p
+          className="
+          mt-6
+          max-w-2xl
+          text-white/85
+          text-lg
+          md:text-xl
+          leading-9
+          font-light
+          "
+        >
+          Quiet luxury for the moments
+          before the world begins.
+        </p>
 
       </div>
 
-      {/* CONTENT */}
+      {/* Bottom Information */}
 
-      <div className="relative z-10 min-h-screen flex items-center">
+      <div
+        className="
+        absolute
+        bottom-12
+        left-0
+        right-0
+        z-20
+        px-10
+        md:px-20
+        flex
+        justify-between
+        items-end
+        "
+      >
 
-        <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-8 md:px-20">
+        <div>
 
-          <div className="max-w-5xl space-y-10">
-
-            {/* MICRO TAG */}
-
-            <div className="space-y-4">
-
-              <p className="text-[9px] tracking-[0.5em] uppercase opacity-40">
-
-                a subsidiary of die
-
-              </p>
-
-            </div>
-
-            {/* TITLE */}
-
-            <h1
-              className="
-              text-5xl
-              sm:text-6xl
-              md:text-8xl
-              lg:text-[11rem]
-              xl:text-[13rem]
-              font-extralight
-              tracking-[0.08em]
-              leading-none
+          <p
+            className="
+            uppercase
+            tracking-[0.55em]
+            text-[10px]
+            text-white/70
             "
-            >
+          >
+            Volume 001
+          </p>
 
-              PROSTITUÉE
+          <p
+            className="
+            mt-3
+            text-white/60
+            text-sm
+            "
+          >
+            Spring / Summer 2027
+          </p>
 
-            </h1>
+        </div>
 
-            {/* DESCRIPTION */}
+        <div className="text-right">
 
-            <div className="space-y-4">
-
-              <p
-                className="
-                max-w-xl
-                text-[11px]
-                uppercase
-                tracking-[0.28em]
-                leading-8
-                opacity-75
-              "
-              >
-
-                second skin for women and men.
-
-                underwear, loungewear and private uniforms.
-
-              </p>
-
-            </div>
-
-            {/* CTA */}
-
-            <div className="flex flex-wrap gap-5 pt-4">
-
-              <button
-                className="
-                border
-                border-white/25
-                px-8
-                py-4
-                text-[10px]
-                uppercase
-                tracking-[0.45em]
-                hover:bg-white
-                hover:text-black
-                transition-all
-                duration-500
-              "
-              >
-
-                womenswear
-
-              </button>
-
-              <button
-                className="
-                border
-                border-white/25
-                px-8
-                py-4
-                text-[10px]
-                uppercase
-                tracking-[0.45em]
-                hover:bg-white
-                hover:text-black
-                transition-all
-                duration-500
-              "
-              >
-
-                menswear
-
-              </button>
-
-            </div>
-
-          </div>
+          <p
+            className="
+            uppercase
+            tracking-[0.55em]
+            text-[10px]
+            text-white/70
+            "
+          >
+            Paris · Genève · Milano
+          </p>
 
         </div>
 
       </div>
 
-      {/* BOTTOM LABEL */}
+      {/* Scroll Indicator */}
 
       <div
         className="
         absolute
-        bottom-10
+        bottom-12
         left-1/2
         -translate-x-1/2
-        text-[9px]
-        tracking-[0.55em]
-        uppercase
-        opacity-35
-      "
+        z-20
+        flex
+        flex-col
+        items-center
+        "
       >
 
-        intimacy • luxury • essentials
+        <div className="w-px h-12 bg-white/40 mb-4" />
+
+        <span
+          className="
+          uppercase
+          tracking-[0.7em]
+          text-[10px]
+          text-white/70
+          "
+        >
+          Scroll
+        </span>
 
       </div>
 
