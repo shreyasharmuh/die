@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="flex justify-center mb-24">
 
           <Image
-            src="/images/collaborations/adidas-originals/logo2.svg"
+            src="/images/collaborations/adidas-originals/logo1.svg"
             alt="Adidas Originals"
             width={150}
             height={70}
