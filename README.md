@@ -55,7 +55,6 @@ src/
 
 ## ⚙️ Environment Variables
 
-```env
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 
@@ -72,6 +71,8 @@ npm run build
 
 # start production build
 npm start
+
+
 🔒 Middleware Protection
 
 Routes are protected using Next.js middleware:
@@ -88,7 +89,11 @@ Luxury fashion-inspired typography
 Minimalist black/white aesthetic
 Cinematic motion-first layout
 High-end digital brand identity
+
+
 🧠 Key Features
+
+
 Supabase authentication flow
 Protected routes via middleware
 Dynamic navbar auth state

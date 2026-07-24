@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -11,14 +12,17 @@ import MenCampaignEditorial from "@/components/prostituee/men/CampaignEditorial"
 import Fabric from "@/components/prostituee/men/Fabric";
 import CampaignFilm from "@/components/prostituee/men/CampaignFilm";
 import Everyday from "@/components/prostituee/men/Everyday";
+import MenFinalStatement from "@/components/prostituee/men/FinalStatement";
+import MenFooter from "@/components/prostituee/men/Footer";
 
 // WOMEN
 // import WomenCollection from "@/components/prostituee/women/Collection";
 // import WomenCampaignEditorial from "@/components/prostituee/women/CampaignEditorial";
-
-import Journal from "@/components/prostituee/Journal";
-import FinalStatement from "@/components/prostituee/FinalStatement";
-import Footer from "@/components/prostituee/Footer";
+// import WomenFabric from "@/components/prostituee/women/Fabric";
+// import WomenCampaignFilm from "@/components/prostituee/women/CampaignFilm";
+// import WomenEveryday from "@/components/prostituee/women/Everyday";
+// import WomenFinalStatement from "@/components/prostituee/women/FinalStatement";
+// import WomenFooter from "@/components/prostituee/women/Footer";
 
 export default function ProstitueePage() {
   const [gender, setGender] = useState<"men" | "women">("men");
@@ -42,33 +46,30 @@ export default function ProstitueePage() {
           <Fabric />
 
           <CampaignFilm />
+
           <Everyday />
+
+          <MenFinalStatement />
+
+          <MenFooter />
         </>
       ) : (
         <>
-          <div className="py-40 text-center text-neutral-500 uppercase tracking-[0.4em] text-sm">
+          <div className="py-40 text-center uppercase tracking-[0.45em] text-sm text-neutral-500">
             Women's Collection — Coming Soon
           </div>
 
           {/*
-          Later replace with:
-
           <WomenCollection />
-
           <WomenCampaignEditorial />
-
           <WomenFabric />
-
           <WomenCampaignFilm />
+          <WomenEveryday />
+          <WomenFinalStatement />
+          <WomenFooter />
           */}
         </>
       )}
-
-      <Journal />
-
-      <FinalStatement />
-
-      <Footer />
 
     </main>
   );
